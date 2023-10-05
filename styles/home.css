@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+:root{
+    --gray-color:#999999;
+    --grayDark-color:#4D4D4D;
+    --brown-color:#4D2A05;
+    --black-color:#000000;
+    --begeDark-color:#332C24;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background-color:var(--grayDark-color);
+    color:var(--gray-color);
+    font-size: 16px;
+}
+section{
+    min-height:100vh;
+}
+#home{
+    display: flex;
+    justify-content: space-between;
+}
+#home article{
+
+}
+#home picture{
+    
+}
