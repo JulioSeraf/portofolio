@@ -1,7 +1,10 @@
+/* Configuration General */
 *,
 *::before,
 *::after{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 :root{
     --gray-color:#999999;
@@ -17,6 +20,28 @@ body{
     background-color:var(--grayDark-color);
     color:var(--gray-color);
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex-grow: 1;
+}
+/* Header setting */
+header{
+    display: flex;
+    justify-content: center;
+   border: 1px solid white;
+}
+header nav{
+   display: flex;
+   flex-direction: column;
+   width:fit-content;
+}
+header nav a{
+    text-decoration: none;
+    color: white;
+    margin:10px;
 }
 section{
     min-height:100vh;
@@ -31,3 +56,15 @@ section{
 #home picture{
     
 }
+@media screen and (min-width:600px) {
+    header{
+        display: flex;
+        justify-content:right;
+        padding: 10px;
+    }
+    header nav{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
