@@ -37,12 +37,27 @@ header nav{
    display: flex;
    flex-direction: column;
    width:fit-content;
+   height: fit-content;
+   position: absolute;
+   top: -100%;
+
 }
 header nav a{
     text-decoration: none;
     color: white;
     margin:10px;
+    /* position: absolute; */
+    /* top: -100%; */
 }
+header nav a:hover{
+
+}
+#icon-menu{
+    position:absolute;
+    right:10px;
+    width:clamp(20px,20%,40px);
+}
+.no
 section{
     min-height:100vh;
 }
@@ -65,6 +80,9 @@ section{
     header nav{
         display: flex;
         flex-direction: row;
+    }
+    #icon-menu{
+        display: none;
     }
 }
 
