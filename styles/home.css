@@ -31,33 +31,31 @@ main{
 header{
     display: flex;
     justify-content: center;
-   border: 1px solid white;
 }
 header nav{
    display: flex;
+   position: fixed;
    flex-direction: column;
    width:fit-content;
-   height: fit-content;
-   position: absolute;
+   transition: 0.6s all ease-out;
    top: -100%;
-
+}
+.no-active-menu{
+    top:0%;
 }
 header nav a{
     text-decoration: none;
     color: white;
     margin:10px;
     /* position: absolute; */
-    /* top: -100%; */
-}
-header nav a:hover{
-
 }
 #icon-menu{
-    position:absolute;
-    right:10px;
+    position:fixed;
+    top: 0%;
+    right: 0px;
     width:clamp(20px,20%,40px);
 }
-.no
+
 section{
     min-height:100vh;
 }
@@ -65,11 +63,11 @@ section{
     display: flex;
     justify-content: space-between;
 }
-#home article{
 
-}
-#home picture{
-    
+#scrool-up{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
 }
 @media screen and (min-width:600px) {
     header{
