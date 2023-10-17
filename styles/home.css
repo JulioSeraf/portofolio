@@ -25,6 +25,10 @@ body{
     min-height: 100vh;
     max-width: 100vw;
 }
+.bodyDark{
+    background-color: white;
+    color: black;
+}
 main{
     flex-grow: 1;
 }
@@ -40,6 +44,8 @@ header nav{
    width:fit-content;
    right: -100%;
    top:10%;
+   background-color: var(--begeDark-color);
+   border-radius: 10px;
 }
 .active-menu{
     right: 0%;
@@ -79,10 +85,14 @@ section{
     border: 1px solid white;
 }
 
-#scrool-up{
+#scroll-up{
+    display: none;
     position: fixed;
     bottom: 0%;
     right: 0%;
+}
+#dark-light{
+    
 }
 @media screen and (min-width:600px) {
     header{
