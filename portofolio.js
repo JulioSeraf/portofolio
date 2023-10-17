@@ -50,13 +50,15 @@ d.addEventListener("click",(e)=>{
         });
     };
     if(e.target === $darkLight){
-        d.body.classList.toggle('bodyDark');
-        $darkLight.classList.toggle('isDark')
+        // d.body.classList.toggle('bodyDark');
+        // $darkLight.classList.toggle('isDark')
        if($darkLight.classList.contains('isDark')){
-           lS.setItem('thema','light');
+           lS.setItem('thema','dark');
+           themaLight();
         }else{
-            lS.setItem('thema','dark');
-        }
+            lS.setItem('thema','light');
+            themaDark();
+        };
     };
 });
 
