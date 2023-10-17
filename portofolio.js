@@ -17,13 +17,13 @@ if(innerWidth > 600){
     };  
 });
 const themaDark = ()=>{
-    d.body.classList.add('bodyDark');
-    $darkLight.classList.add('isDark');
+    d.body.classList.remove('bodyLight');
+    $darkLight.classList.remove('isLight');
 
 };
 const themaLight = ()=>{
-    d.body.classList.remove('bodyDark');
-    $darkLight.classList.remove('isDark');
+    d.body.classList.add('bodyLight');
+    $darkLight.classList.add('isLight');
 };
 window.addEventListener('resize',()=>{
     (innerWidth > 600)?$menuNav.classList.add('active-menu'):$menuNav.classList.remove('active-menu');
@@ -52,12 +52,12 @@ d.addEventListener("click",(e)=>{
     if(e.target === $darkLight){
         // d.body.classList.toggle('bodyDark');
         // $darkLight.classList.toggle('isDark')
-       if($darkLight.classList.contains('isDark')){
+       if($darkLight.classList.contains('isLight')){
            lS.setItem('thema','dark');
-           themaLight();
+           themaDark();
         }else{
             lS.setItem('thema','light');
-            themaDark();
+            themaLight();
         };
     };
 });
@@ -65,8 +65,8 @@ d.addEventListener("click",(e)=>{
 d.addEventListener('DOMContentLoaded',()=>{
     console.log('ok')
     if(lS.getItem('thema') === null) lS.setItem('thema','light');
-    if(lS.getItem(`thema`) === 'dark') themaDark();
-    if(lS.getItem('thema') === 'light') themaLight();
+    if(lS.getItem("thema") === 'dark') themaDark();
+    if(lS.getItem("thema") === 'light') themaDark();
 });
 // control de barra menu para desktop 
 

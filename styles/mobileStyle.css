@@ -1,0 +1,25 @@
+@media screen and (min-width:600px) {
+    header{
+        display: flex;
+        justify-content:right;
+        padding: 10px;
+    }
+    header nav{
+        display: flex;
+        flex-direction: row;
+        top: 0% !important;
+    }
+    header nav a{
+        font-size: 100%;
+    }
+    #icon-menu{
+        display: none;
+    }
+    #home h1{
+        font-size: 3em;
+    }
+    #home div{
+        font-size: 9em;
+    }
+    
+}

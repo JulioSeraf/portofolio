@@ -27,13 +27,13 @@ body{
 }
 
 /* ------------Dark styles----------------------------------- */
-.bodyDark{
+.bodyLight{
     background-color: white;
     color: black;
 }
-.isDark{
-    background-color: black;
-    color: white;
+.isLight{
+    background-color: white;
+    color: black;
 }
 main{
     flex-grow: 1;
@@ -58,11 +58,19 @@ header nav{
     top:10%;
 }
 header nav a{
+    flex: 0 1 auto;
     text-decoration: none;
     color: white;
-    margin:15px;
+    margin:15px 20px;
     font-size: 150%;
     /* position: absolute; */
+}
+   
+#dark-light{
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    font-size: 110%;
 }
 #icon-menu{
     position:fixed;
@@ -77,45 +85,13 @@ section{
     min-height:100vh;
 }
 #home{
-    display: flex;
-    justify-content:space-evenly;
-}
-#home article{
-    flex-grow: 1;
-    font-size: 3em;
-    text-align: center;
-}
-#home img{
-    flex-grow: 1;
-    width: 50%;
-    border: 1px solid white;
-}
-
-#scroll-up{
-    display: none;
-    position: fixed;
-    bottom: 0%;
-    right: 0%;
-}
-#dark-light{
+    animation: textmove infinite ease-in ;
+    color: white;
     
 }
-@media screen and (min-width:600px) {
-    header{
-        display: flex;
-        justify-content:right;
-        padding: 10px;
-    }
-    header nav{
-        display: flex;
-        flex-direction: row;
-        top: 0% !important;
-    }
-    header nav a{
-        font-size: 100%;
-    }
-    #icon-menu{
-        display: none;
-    }
+@keyframes  {
+    
 }
+
+
 
