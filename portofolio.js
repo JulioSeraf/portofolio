@@ -1,4 +1,5 @@
 const d = document,
+    lS = localStorage,
     $menuNav = d.querySelector('#menu-nav'),
     $scrollUp = d.getElementById('scroll-up'),
     $darkLight = d.getElementById('dark-light');
@@ -16,11 +17,14 @@ if(innerWidth > 600){
     };  
 });
 const themaDark = ()=>{
+    d.body.classList.add('bodyDark');
+    $darkLight.classList.add('isDark');
 
-}
-const themaLigth = ()=>{
-
-}
+};
+const themaLight = ()=>{
+    d.body.classList.remove('bodyDark');
+    $darkLight.classList.remove('isDark');
+};
 window.addEventListener('resize',()=>{
     (innerWidth > 600)?$menuNav.classList.add('active-menu'):$menuNav.classList.remove('active-menu');
     if($menuNav.classList.contains('active-menu'))d.getElementById('icon-menu').style.cssText = 'transform: rotate(0deg);'
@@ -46,10 +50,21 @@ d.addEventListener("click",(e)=>{
         });
     };
     if(e.target === $darkLight){
-        d.querySelector('body').classList.toggle('bodyDark');
-       
+        d.body.classList.toggle('bodyDark');
+        $darkLight.classList.toggle('isDark')
+       if($darkLight.classList.contains('isDark')){
+           lS.setItem('thema','light');
+        }else{
+            lS.setItem('thema','dark');
+        }
     };
 });
 
+d.addEventListener('DOMContentLoaded',()=>{
+    console.log('ok')
+    if(lS.getItem('thema') === null) lS.setItem('thema','light');
+    if(lS.getItem(`thema`) === 'dark') themaDark();
+    if(lS.getItem('thema') === 'light') themaLight();
+});
 // control de barra menu para desktop 
 

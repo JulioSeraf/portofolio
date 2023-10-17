@@ -25,9 +25,15 @@ body{
     min-height: 100vh;
     max-width: 100vw;
 }
+
+/* ------------Dark styles----------------------------------- */
 .bodyDark{
     background-color: white;
     color: black;
+}
+.isDark{
+    background-color: black;
+    color: white;
 }
 main{
     flex-grow: 1;
