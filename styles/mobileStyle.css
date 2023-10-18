@@ -1,4 +1,4 @@
-@media screen and (min-width:600px) {
+@media screen and (min-width:600px){
     header{
         display: flex;
         justify-content:right;
@@ -14,12 +14,6 @@
     }
     #icon-menu{
         display: none;
-    }
-    #home h1{
-        font-size: 3em;
-    }
-    #home div{
-        font-size: 9em;
     }
     
 }
