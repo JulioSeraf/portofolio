@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="/styles/mobileStyle.css">
+    <link rel="stylesheet" href="styles/mobileStyle.css">
+    <link rel="stylesheet" href="/styles/desktopStyle.css">
     <title>Portofolio Julio</title>
 </head>
 <body>
@@ -14,19 +14,31 @@
             <a href="#trabajos" class="link-nav">Trabajos</a>
             <a href="#sobremi" class="link-nav">Sobre mí</a>
             <a href="#contacto" class="link-nav">Contacto</a>
-            <button id="dark-light">Dark</button>
+            <!-- <button id="dark-light">Dark</button> -->
         </nav>
         <img src="imgs/icon-menu.png" alt="icon-menu" id="icon-menu">
     </header>
     <main>
         <section id="home" class="section-main">
                 <article>
-                    <h2 class="welcome">Hola Bienvenido!</h2>
-                    <h1><small>soy </small><span>Julio Serafim</span></h1>
-                    <h2>Desarollador web</h2>
+                    <h2 class="welcome">Hola, Bienvenido<span>!</span></h2>
+                    <h1><small>soy </small>
+                        <span id="nameDinamic">
+                           <!-- Julio Serafim -->
+                       </span>
+                </h1>
+                    <div class="devH2">
+                        <h2>Desarrollador</h2>
+                        <h2 class="dinamicWeb">Web</h2>
+                    </div>
                 </article>
-            <!-- <picture><img src="imgs/mi.png" alt="My picture"></picture> -->
-            <img src="imgs/imgfundoweb.jpg" alt="">
+            <img id="img-Home" src="imgs/imgfundoweb.jpg" alt="img-home">
+            <picture class="iconesWeb">
+                <img src="imgs/html.png" alt="">
+                <img src="imgs/css-3.png" alt="">
+                <img src="imgs/script-java.png" alt="">
+                <img src="imgs/github.png" alt="">
+            </picture>
         </section>
         <section id="trabajos" class="section-main">
             <p>trabajos</p>

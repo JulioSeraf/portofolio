@@ -2,8 +2,25 @@ const d = document,
     lS = localStorage,
     $menuNav = d.querySelector('#menu-nav'),
     $scrollUp = d.getElementById('scroll-up'),
-    $darkLight = d.getElementById('dark-light');
+    $darkLight = d.getElementById('dark-light'),
+    $nameDinamic = d.getElementById('nameDinamic');
+    let Myname = ' Julio Serafim';
+    Myname = Myname.split('');
 
+const nameDinamic = ()=>{
+    let stopTime = 0;
+    let time = setInterval(()=>{
+        stopTime++;
+        $nameDinamic.textContent += Myname[stopTime]
+        if(stopTime === Myname.length){
+            $nameDinamic.textContent = '';
+            clearInterval(time)
+        }
+    },300);
+}
+setInterval(()=>{
+    nameDinamic()
+},300*Myname.length)
 if(innerWidth > 600){
     $menuNav.classList.add('active-menu');
 };
@@ -11,10 +28,14 @@ if(innerWidth > 600){
     //scroll-up Displays
  d.addEventListener('scroll',()=>{
     if(scrollY >= 600){
-        $scrollUp.style.display = 'block'
+        $scrollUp.style.display = 'block';
+        d.getElementById('img-Home').style.cssText = 'left:-100%';
+
     }else{
         $scrollUp.style.display = 'none';
-    };  
+        d.getElementById('img-Home').style.cssText = 'left:25%';
+    }; 
+    
 });
 const themaDark = ()=>{
     d.body.classList.remove('bodyLight');
@@ -64,6 +85,7 @@ d.addEventListener("click",(e)=>{
 
 d.addEventListener('DOMContentLoaded',()=>{
     console.log('ok')
+    d.getElementById('img-Home').style.cssText = 'left:25%';
     if(lS.getItem('thema') === null) lS.setItem('thema','light');
     if(lS.getItem("thema") === 'dark') themaDark();
     if(lS.getItem("thema") === 'light') themaDark();
