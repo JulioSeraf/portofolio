@@ -3,10 +3,11 @@ const d = document,
     $menuNav = d.querySelector('#menu-nav'),
     $scrollUp = d.getElementById('scroll-up'),
     $darkLight = d.getElementById('dark-light'),
-    $nameDinamic = d.getElementById('nameDinamic');
+    $nameDinamic = d.getElementById('nameDinamic'),
+    $projetos = d.querySelectorAll('.projetos');
+    console.log($projetos)
     let Myname = ' Julio Serafim';
     Myname = Myname.split('');
-
 const nameDinamic = ()=>{
     let stopTime = 0;
     let time = setInterval(()=>{
@@ -68,8 +69,6 @@ d.addEventListener("click",(e)=>{
         });
     };
     if(e.target === $darkLight){
-        // d.body.classList.toggle('bodyDark');
-        // $darkLight.classList.toggle('isDark')
        if($darkLight.classList.contains('isLight')){
            lS.setItem('thema','dark');
            themaDark();
@@ -82,7 +81,7 @@ d.addEventListener("click",(e)=>{
 
 d.addEventListener('DOMContentLoaded',()=>{
     console.log('ok')
-    d.getElementById('img-Home').style.cssText = 'left:50%; transform:translate(-50%);';
+    d.getElementById('img-Home').style.cssText = 'left:50%;transform:translate(-50%);';
     //Name Dinamico Home
     nameDinamic();
     setInterval(()=>{
