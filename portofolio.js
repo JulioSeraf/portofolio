@@ -24,13 +24,13 @@ if(innerWidth > 600){
 
     //scroll-up Displays
  d.addEventListener('scroll',()=>{
-    if(scrollY >= 600){
+    if(scrollY >= 750){
         $scrollUp.style.display = 'block';
         d.getElementById('img-Home').style.cssText = 'left:-100% !important';
 
     }else{
         $scrollUp.style.display = 'none';
-        d.getElementById('img-Home').style.cssText = 'left:10% !important';
+        d.getElementById('img-Home').style.cssText = 'left:50%; transform:translate(-50%);';
     }; 
     
 });
@@ -82,7 +82,7 @@ d.addEventListener("click",(e)=>{
 
 d.addEventListener('DOMContentLoaded',()=>{
     console.log('ok')
-    d.getElementById('img-Home').style.cssText = 'left:10% !important';
+    d.getElementById('img-Home').style.cssText = 'left:50%; transform:translate(-50%);';
     //Name Dinamico Home
     nameDinamic();
     setInterval(()=>{
