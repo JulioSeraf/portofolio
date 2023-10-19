@@ -51,10 +51,11 @@ header nav{
    display: flex;
    position: fixed;
    flex-direction: column;
+   justify-content: space-evenly;
    width:100%;
    height: 100%;
    top:-100%;
-   background-image: linear-gradient(to bottom, var(--purpleDark-color),var(--gold-color));
+   background-image: linear-gradient(to bottom, var(--black-color),var(--gold-color));
    border-radius: 10px;
    z-index: 999;
 }
@@ -68,19 +69,13 @@ header .nav-div{
 }
 header nav a{
     flex: 0 1 auto;
-    color: var(--gold-color);
+    color: white;
     text-align: center;
     text-decoration: none;
     font-weight: bolder;
     margin:15px 20px;
     font-size: 150%;
-    /* position: absolute; */
-}
-header nav img{
-    width:10%;
-    margin: auto;
-}
-   
+}   
 #dark-light{
     color: inherit;
     background-color: inherit;
@@ -96,60 +91,94 @@ header nav img{
     width:clamp(20px,20%,40px);
     z-index: 999;
 }
-
 section{
-    min-height:100vh;
+    min-height: 100vh;
+    max-height: 100%;
 }
-
 /* home section */
 
 #home{
     max-width:100vw;
     height: auto;
-    background-image: linear-gradient(to bottom,var(--purpleDark-color), var(--gold-color),var(--purpleDark-color));
-    position: relative;
+    background-image: linear-gradient(to bottom,var(--purpleDark-color),var(--purpleDark-color), var(--gold-color));
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 #home article{
-    flex-grow: 1;
-    position: relative;
+    flex: 1 1 auto;
     text-align: center;
-    font-size: 5vw;
+    font-size: 7vw;
 }
 #home .welcome{
-    position: absolute;
-    top: 8%;
-    left: 5%;
+    margin: 35px auto 10px auto;
 }
 #home h1{
-    position: absolute;
-    top: 13%;
-    left: 20%;
+    font-size: 4vw;
 }
 #home span{
     font-size: 10vw;
-    color: var(--purpleDark-color);
+    color:var(--orangeColor);
     text-shadow: 0px 0px 5px var(--purpleDark-color);
 }
 #home .devH2{
-    position: absolute;
-    top: 21%;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 10px 40px 10px auto;
+    position: relative;
+    font-size: 5vw;
+}
+@keyframes dinamicWeb {
+    0%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(95deg);
+    }
+}
+#home .dinamicWeb{
+    animation: dinamicWeb 2s infinite alternate ease-in-out;
+    position: absolute; 
+    top: 65%;
+    right: 9%;
+    width: 10%;
+    text-align: right;
+    color: var(--orangeColor);
+}
+
+#home .iconesWeb{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex: 1 1 auto;
+    margin: 10px auto;
+}
+#home .iconesWeb img{
+    width: 20%;
+
+}
+@keyframes imgMove {
+    0%{
+        border-radius: 30% 10% 30% 10%;
+    }
+    100%{
+        border-radius:10% 30% 10% 30%;
+    }
 }
 #home > img{
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%);
-    margin: auto;
-    max-width:clamp(300px,30%,400px);
+    align-self: center;
+    flex: 1 1 auto;
+    animation: imgMove 4s infinite alternate ease-in-out;
+    width:clamp(300px,30%,1200px);
     height: auto;
     border-radius: 30% 10% 30% 10%;
     box-shadow: 0px 5px 0px 10px #fed352;
+    margin-bottom: 60px;
 }
 
+/* Section Projectos */
 
+#trabajos{
+    background-image: linear-gradient(to bottom, var(--gold-color),var(--purpleDark-color));
+}
 

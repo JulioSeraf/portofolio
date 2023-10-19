@@ -17,10 +17,7 @@ const nameDinamic = ()=>{
             clearInterval(time)
         }
     },300);
-}
-setInterval(()=>{
-    nameDinamic()
-},300*Myname.length)
+};
 if(innerWidth > 600){
     $menuNav.classList.add('active-menu');
 };
@@ -29,11 +26,11 @@ if(innerWidth > 600){
  d.addEventListener('scroll',()=>{
     if(scrollY >= 600){
         $scrollUp.style.display = 'block';
-        d.getElementById('img-Home').style.cssText = 'left:-100%';
+        d.getElementById('img-Home').style.cssText = 'left:-100% !important';
 
     }else{
         $scrollUp.style.display = 'none';
-        d.getElementById('img-Home').style.cssText = 'left:25%';
+        d.getElementById('img-Home').style.cssText = 'left:10% !important';
     }; 
     
 });
@@ -85,7 +82,12 @@ d.addEventListener("click",(e)=>{
 
 d.addEventListener('DOMContentLoaded',()=>{
     console.log('ok')
-    d.getElementById('img-Home').style.cssText = 'left:25%';
+    d.getElementById('img-Home').style.cssText = 'left:10% !important';
+    //Name Dinamico Home
+    nameDinamic();
+    setInterval(()=>{
+        nameDinamic()
+    },300*Myname.length)
     if(lS.getItem('thema') === null) lS.setItem('thema','light');
     if(lS.getItem("thema") === 'dark') themaDark();
     if(lS.getItem("thema") === 'light') themaDark();
