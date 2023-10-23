@@ -193,43 +193,38 @@ section{
 }
 .projetos-primario{
     position: relative;
-    flex-grow: 1;
+    flex: 1 0 auto;
 }
-@keyframes imgProjetos {
+@keyframes moveProject {
     0%{
-        border-radius: 10% 10% 30% 30%;
-        transform: translate(-20%);
-    }
-    25%{
-        border-radius:10% 10% 30% 30%;
-        transform: translate(-30%);
-    }
-    50%{
-        border-radius:10% 10% 10% 30%;
-        transform: translate(-50%);
-    }
-    75%{
-        border-radius:10% 10% 30% 10%;
-        transform: translate(-60%);
+        transform: 
+        perspective(1000px)
+        translate(0%)
+        scale(1)
+        
+
     }
     100%{
-        border-radius:10% 10% 30% 10%;
-        transform: translate(-80%);
+        transform: 
+        perspective(1500px)
+        translate(-90%)
+        scale(.8)
     }
+    
 }
 .projetos-primario figure{
     position: absolute;
     width: 60%;
     left: 50%;
-    box-shadow: 0 0 10px black;
-    /* transform: translate(-50%); */
+    border-radius: 30px;
+    transform: translate(-50%); 
     overflow: hidden;
-    animation: imgProjetos 2s infinite alternate-reverse ease-in-out;
+    animation: moveProject s infinite alternate ease-in-out;
 }
 
 .projetos-primario figure img{
     width: 100%;
-    border-radius: 10%;
+    border-radius: 10%; 
 }
 .projetos-primario .leftImg{
     left: 0% ;
@@ -253,11 +248,23 @@ section{
     transform: translate(-50%);
     animation: none;
     box-shadow: none;
-    /* transition: 1s; */
-}
-.projetos-primario figure figcaption{
+    transition: 1s;
+} 
+
+ .projetos-primario figure figcaption{
     position: absolute;
-    top: 50%;
+    top: 50%; 
+}  
+.projetos-primario button{
+    position: absolute;
+    bottom: 0%;
+    z-index: 999;
+    
 }
-
-
+.projetos-primario #leftBt{
+    left: 0;
+    rotate:180deg;
+}
+.projetos-primario #rightBt{
+    right: 0;
+}
