@@ -1,4 +1,7 @@
 @media screen and (min-width:600px){
+    body{
+        display: grid;
+    }
     header{
         display: flex;
         justify-content:right;
@@ -99,10 +102,7 @@
     }
     #home > img{
         animation: imgMove 4s infinite alternate ease-in-out;
-        /* position: absolute;
-        top: 4%;
-        left: -100% !important;
-        transition: 1.2s all ease-in; */
+     
     }
     #home .iconesWeb{
         position: absolute;

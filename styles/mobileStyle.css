@@ -196,7 +196,7 @@ section{
     position: relative;
     flex: 2 0 auto;
 }
-@keyframes moveProject {
+/* @keyframes moveProject {
     0%{
         transform: 
         perspective(1000px)
@@ -212,7 +212,7 @@ section{
         scale(.8)
     }
     
-}
+} */
 .projetos-primario figure{
     position: absolute;
     width: 60%;
@@ -220,11 +220,11 @@ section{
     border-radius: 30px;
     transform: translate(-50%); 
     overflow: hidden;
-    animation: moveProject s infinite alternate ease-in-out;
+    /* animation: moveProject s infinite alternate ease-in-out; */
 }
 
 .projetos-primario figure img{
-    width: 100%;
+    width: 90%;
     border-radius: 10%; 
 }
 .projetos-primario .leftImg{
