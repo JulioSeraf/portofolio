@@ -1,4 +1,10 @@
 
+
+let numero = 3
+
+for(let i = 0; i < 3)
+
+
 const d = document,
     lS = localStorage,
     $menuNav = d.querySelector('#menu-nav'),
