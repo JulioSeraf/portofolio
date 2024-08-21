@@ -1,10 +1,3 @@
-
-
-let numero = 3
-
-for(let i = 0; i < 3)
-
-
 const d = document,
     lS = localStorage,
     $menuNav = d.querySelector('#menu-nav'),
@@ -30,29 +23,7 @@ const nameDinamic = ()=>{
 
 // fuction para projetos 
  const ProjectosNext = (e)=> {
-    if(e.target.matches("#leftBt *")){
-        console.log("left");
-        let firstProj = $projetos.firstChild
-        $projetos.removeChild(firstProj)
-        $projetos.appendChild(firstProj)
-        console.log($projetos);
-        
-
-
-
-
-        // let FirstProj = miProjectos.shift();
-        // miProjectos.push(FirstProj);
-        // console.log(miProjectos)
-        // console.log(FirstProj)
-
-    }else if(e.target.matches("#rightBt *")){
-        console.log('RGITH')
-        let LastProj = miProjectos.pop();
-        miProjectos.unshift(LastProj);
-        console.log(miProjectos)
-        console.log(LastProj)
-    }
+   
  }
 
 //scroll-up Displays
@@ -85,7 +56,7 @@ window.addEventListener('resize',()=>{
 });
 
 d.addEventListener("click",(e)=>{
-    // menu-nav
+    // menu-nav  Criar un touch move para menu
     if(e.target.matches('#icon-menu')){
         // alert('ok')
         $menuNav.style.cssText = `transition: 0.6s all ease-out;`
@@ -98,6 +69,7 @@ d.addEventListener("click",(e)=>{
         d.getElementById('icon-menu').style.cssText = 'transform: rotate(0deg);';
     };
     //scroll para inicio
+
     if(e.target.matches("#scroll-up *")){
         scroll({
             top:0,
@@ -117,12 +89,12 @@ d.addEventListener("click",(e)=>{
 });
 
 d.addEventListener('DOMContentLoaded',()=>{
+    // nameDinamic();
     d.getElementById('img-Home').style.cssText = 'left:50%;transform:translate(-50%);';
     if(innerWidth > 600){
         $menuNav.classList.add('active-menu');
     };
-    //Name Dinamico Home
-    nameDinamic();
+    // Name Dinamico Home
     setInterval(()=>{
         nameDinamic()
     },300*Myname.length)

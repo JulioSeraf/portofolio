@@ -186,6 +186,7 @@ section{
 /* Section Projectos */
 
 #trabajos{
+    display: none;
     background-image: linear-gradient(to bottom, var(--gold-color),var(--purpleDark-color));
     display: flex;
     flex-direction: column;
@@ -193,6 +194,7 @@ section{
     padding-top: 35px;
 }
 .projetos-primario{
+    display: none;
     position: relative;
     flex: 2 0 auto;
 }
